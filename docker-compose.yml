@@ -1,0 +1,19 @@
+version: "3"
+services:
+  # SERVER
+  server:
+    container_name: server
+    build: ./server
+    ports:
+      - 3000:3000
+    restart: unless-stopped
+    # depends_on:
+    #   - mongo
+
+  # MONGO
+  # mongo:
+  #   image: mongo
+  #   container_name: mongo
+  #   restart: always
+  #   ports:
+  #     - 27017:27017
